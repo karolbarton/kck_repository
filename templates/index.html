@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+   {% extends 'base.html' %}
+   <head>
+       <title>Ja, robot</title>
+       <meta charset="UTF-8">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link rel="stylesheet" href="style.css" />
+   </head>
+   
+   {% block content %}
+
+   <body>
+   
+   <script>
+   function changeImage() {
+    var image = document.getElementById('plakat');
+    if (image.src.match("fwcdn")) {
+        image.src = "https://i.wpimg.pl/O/450x575/i.wp.pl/a/f/film/008/37/36/0023637.jpg";
+    } else {
+        image.src = "https://1.fwcdn.pl/po/54/92/95492/7521206.6.jpg";
+    }
+}
+
+	function scrollWin() {
+		window.scrollTo(1000, 0);
+	}
+   </script>
+   
+   
+	<header>
+        <h1 id="tytul">Ja, robot (I, robot) to amerykański film science fiction z 2004 roku na podstawie serii książek <strong>Isaaca Asimova</strong></h1>
+		<img id="plakat" onclick="changeImage()" src="https://i.wpimg.pl/O/450x575/i.wp.pl/a/f/film/008/37/36/0023637.jpg" width="240" height="360">
+		
+		
+	</header>
+
+		
+<section>
+  <nav>
+  <h3>Więcej o filmie:</h3>
+    <ul>
+      <li><a href="https://www.filmweb.pl/Ja.Robot">Filmweb</a></li>
+      <li><a href="https://pl.wikipedia.org/wiki/Ja,_robot_(film)">Wikipedia</a></li>
+      <li><a href="https://www.imdb.com/title/tt0343818/">IMDB</a></li>
+    </ul>
+  </nav>
+  
+	<article>
+        <p>W 2035 roku roboty stały się integralną częścią codziennego życia wszystkich ludzi.<br> Kiedy ginie genialny naukowiec pracujący w wielkiej korporacji U.S. Robotics, chicagowski detektyw Del Spooner (Will Smith) podejmuje śledztwo. Z pomocą doktor Susan Calvin (Bridget Moynahan) - specjalistki od psychologii robotów, detektyw odkrywa, że odpowiedzialnym za śmierć naukowca może być właśnie robot. Im bardziej Spooner zbliża się do prawdy, tym bardziej jego życie znajduje się w niebezpieczeństwie. Czas ucieka, a zagrożenie staje się coraz większe... zagrożenie dla egzystencji całego rodzaju ludzkiego.</p>
+	</article>
+</section>
+	
+	<footer>
+		<h3>Jeśli chciałbyś/chciałabyś się dowiedzieć czegoś więcej o filmie uzupełnij formularz:
+	<form enctype="text/plain" action="mailto:karol.barton@interia.pl?temat_mejla" method="post">
+		 Imię:
+		 <br>
+		 <input type="text" name="firstname" value="">
+		 <br>
+		 Nazwisko:<br>
+		 <input type="text" name="lastname" value="">
+		 <br>
+		 Czego dokładnie pragniesz się dowiedzieć:
+			<br>
+			<textarea name="content" rows="12" cols="50"></textarea>
+			<br>
+		<input type="submit" value="Submit">
+	</form>
+
+	<h6>Źródło: 
+	<a href="https://www.filmweb.pl/Ja.Robot">Ja, robot (Filmweb)</a></h6>
+	<button onclick="scrollWin()">Przejdź do góry</button>
+	</footer>
+    </body>
+	{% endblock content %}
+</html>
+
